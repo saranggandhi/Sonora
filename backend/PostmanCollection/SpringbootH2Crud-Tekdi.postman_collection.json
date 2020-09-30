@@ -1,0 +1,89 @@
+{
+	"variables": [],
+	"info": {
+		"name": "SpringH2Crud-Tekdi",
+		"_postman_id": "eb3f4e51-0a55-e70d-2658-dcf1cb6a6dda",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetEmployeesList",
+			"request": {
+				"url": "{{myPeopleUrl}}",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetEmployee",
+			"request": {
+				"url": "{{myPeopleUrl}}/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"url": "{{myPeopleUrl}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Gitesh Kumar\",\r\n    \"email\": \"gitesh@motorola.biz\",\r\n    \"dob\": \"2000-10-10\",\r\n    \"country\": \"US\",\r\n    \"avatar\": \"https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Edit",
+			"request": {
+				"url": "{{myPeopleUrl}}/1",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Gitesh Kumar2\",\r\n    \"email\": \"gitesh@motorola.biz\",\r\n    \"dob\": \"2000-10-10\",\r\n    \"country\": \"US\",\r\n    \"avatar\": \"https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

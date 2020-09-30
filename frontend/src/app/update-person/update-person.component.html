@@ -1,0 +1,33 @@
+<h3>Update Person</h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">First Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="person.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Email Id</label>
+      <input type="text" class="form-control" id="emailId" required [(ngModel)]="person.email" name="emailId">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Date Of Birth(dob)</label>
+      <input type="date" class="form-control" id="dob" #myDate [value]="person.dob | date:'yyyy-MM-dd'" (input)="person.dob=parseDate($event.target.value)" name="dob">
+      <!-- <input type="date" #myDate [value]="person.dob | date:'yyyy-MM-dd'" (input)="person.dob=parseDate($event.target.value)" /> -->
+
+    </div>
+    
+    <div class="form-group">
+      <label for="name">Avatar</label>
+      <input type="text" class="form-control" id="avatar" required [(ngModel)]="person.avatar" name="avatar">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Country</label>
+      <input type="text" class="form-control" id="country" required [(ngModel)]="person.country" name="country">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
